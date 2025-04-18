@@ -1,0 +1,252 @@
+Data Analysis for office supply sales.
+
+---------------
+Data collection:
+---------------
+Downloaded office supply sales from Kaggle and extracted into CSV format.
+
+
+----------------
+Dataset Overview:
+----------------
+The Office Supply Sales Dataset is a fictional sales data for office supplies such as pens, binders, and desk, and is used 
+for practicing data analysis, especially in tools like Excel,Power query editor.
+
+Total Columns: 6
+Total Rows: 43
+
+-------------------
+Column Descriptions:
+-------------------
+OrderDate: The Date when the order was placed.
+Region: Sales region (e.g., East, Central, West).
+Rep: Name of the sales representative.
+Item: Item sold (e.g., Pen, Binder, Desk).
+Units: How many items were sold/Quantity sold.
+Unit Price: Price per item.
+
+
+----------------------------------------
+Data Cleaning & Preparation
+----------------------------------------
+Opened in power query editor.
+Set Column profiling to "Based on top 1000 rows".
+Renamed the Rep column to Sales Representative.
+Changed OrderDate column data type to Date (removed time) and sorted in Ascending.
+Checked for duplicate records using Remove Duplicates — no duplicates found.
+
+Confirmed appropriate data types:
+Region, Sales Representative, Item → Text
+Units → Whole Number
+Unit Cost → Decimal Number
+
+Verified:
+All text values are properly capitalized.
+No negative numbers in numeric columns.
+
+
++++++++++++++++
+Data Enrichment:
++++++++++++++++
+Added a custom column:
+Total revenue = Units × Unit Cost.
+Set data type to Decimal Number.
+Final dataset structure: 7 columns, 43 rows
+
+Distinct and Unique count for the columns:
+OrderDate : 		   43 and 43
+Region    :            3  and 0
+Sales Representative : 11 and 0
+Item      :            5  and 0
+Units     :           37  and 31
+Unit Price:           12  and 5
+Total Revenue :       41  and 39
+
+All column values scored 100% valid.
+close and load into excel.
+
+-------------
+Created charts:
+-------------
+Total Revenue by Region → Column Chart / Bar Chart / Pie Chart with slicers.
+Total Revenue by Item → Column Chart /Pie Chart / Bar Chart with slicers.
+Sales Rep-wise Performance → Bar/Column Chart with slicers.
+Trend of Sales Over Time → Line Chart using OrderDate with slicers.
+
+
+
+Created a simple Dashboard sheet title "OFFICE SALES SUPPLY DASHBOARD" with KPIs (e.g., Total Sales, Best Rep, Top Item,Best region).
+Added Slicers for interactive filtering (like by Region or Item).
+Used Pivot Tables for flexible analysis.
+Revenue Distribution → Histogram on Total Revenue.
+
+
+
+---------------------------------------
+Insights from Regional Revenue Analysis:
+---------------------------------------
+
+1. Regional Performance Overview:
+Among the three regions — East, Central, and West — the Central region is the top performer with a total revenue of $11,139.
+In contrast, the West region shows the lowest performance, generating only $2,486.
+
+2. Moderate Performance by East:
+The East region falls in between, with a total revenue of $6,002, indicating a moderate performance compared to the other two regions.
+
+3. Percentage Comparison (Central vs. West):
+The Central region generated nearly 4.5 times more revenue than the West, showcasing a significant performance gap.
+
+4. Revenue Gap Analysis:
+There’s a notable revenue gap of $8,653 between the Central and West regions, pointing to uneven sales distribution.
+This suggests that the business should analyze the success factors in the Central region and explore opportunities to replicate them in 
+underperforming areas.
+
+5. Growth Opportunity in the West:
+The West region presents an opportunity for growth.
+Strategies such as exploring local preferences, enhancing marketing efforts, and adjusting pricing could help drive higher revenue.
+
+
+-----------------------------------
+Insights from Total Revenue by Item:
+-----------------------------------
+
+1. Top-Selling Item – Binder:
+The Binder is the top revenue-generating item with $9,578, accounting for nearly 49% of the total revenue. 
+This indicates high demand or strong pricing for this item.
+
+2. Second Best – Pen Set:
+The Pen Set follows with a revenue of $4,170, making up around 21% of the total. 
+This shows it's also a key contributor to sales but still significantly behind the Binder.
+
+3. Moderate Performers – Pencil and Pen:
+Pencil ($2,135) and Pen ($2,045) are mid-range performers, each contributing approximately 10% of the total revenue. 
+These items have relatively balanced performance.
+
+4. Lowest Revenue – Desk:
+Desk is the lowest revenue-generating item at $1,700, contributing about 8.7% of the total. 
+This could be due to fewer units sold, or limited demand.
+
+5. Revenue Concentration:
+The top two items — Binder and Pen Set — together contribute over 70% of the total revenue, 
+indicating a high concentration of sales in fewer products.
+
+6. Opportunity for Diversification:
+With such a heavy reliance on Binders, it may be worth exploring strategies to boost sales of lower-performing items like Desks, or 
+expanding the product mix to balance revenue sources.
+
+
+
+--------------------------------------------
+Sales Performance Insights by Representative:
+--------------------------------------------
+
+1. Top Performers – Matthew & Susan:
+Matthew ($3,109) and Susan ($3,102) together make up 31.6% of the total revenue, contributing significantly to overall sales. 
+Given the minimal difference in their performance, they can be considered the top performers. Their strategies or customer relationships 
+may serve as effective models for others.
+
+2. Solid Contributors – Alex and Richard:
+Alex ($2,812) and Richard ($2,363) are solid contributors, generating $5,175 combined, which accounts for 26.3% of total revenue. 
+Although they are not at the same level as Matthew and Susan, their consistent performance makes them important to the team’s overall success.
+
+3. Moderate Performers – Bill, Smith, and Morgan:
+Bill ($1,750), Smith ($1,641), and Morgan ($1,388) generate $4,779 combined, making up 24.3% of the total. 
+These representatives show steady sales, though there is room for improvement in order to match the contributions of the higher performers.
+
+4. Lowest Revenue – Rachel and Nick:
+Rachel ($438) and Nick ($537) are the lowest performers, together generating under $1,000 in total revenue. 
+This indicates a significant performance gap that warrants further investigation and targeted interventions to improve their sales results.
+
+5. Revenue Concentration:
+The top-performing group (Matthew and Susan) and the next group of solid contributors (Alex and Richard) together account for over 57.9% of 
+the total revenue. This concentration suggests that a few individuals are driving the majority of the sales, which may indicate an 
+opportunity for improving performance across the remaining team members.
+
+6. Opportunities for Growth:
+Skill Development for Lower Performers: Given the large performance gap, focusing on skill development for Rachel and Nick could help 
+improve their overall contribution to the team’s success. Targeted coaching or mentorship could be beneficial.
+
+Replication of Best Practices: It would be worthwhile to analyze the strategies and techniques used by the top performers (Matthew and Susan) 
+to identify best practices that can be shared across the team to drive more balanced revenue generation.
+
+7. Strategic Recommendations:
+Leverage High Performers: Utilize Matthew and Susan’s successful sales tactics and strategies as a model for others, especially the lower 
+performers.
+
+Focused Support for Low Performers: Providing individualized training, enhancing sales tools, or implementing mentorship for Rachel and Nick 
+could increase their productivity.
+
+Balanced Performance Across Team: Regular performance reviews and feedback mechanisms could help ensure that all team members are contributing
+to the overall success of the sales group.
+
+
+
+------------------------------
+Sales Revenue Insights by Year:
+------------------------------
+
+1. Higher Sales in 2014:
+The year 2014 generated the highest revenue, totaling $11,452, which accounts for 58.34% of the overall revenue. 
+This indicates that the business experienced stronger performance during this year.
+
+2. Drop in Revenue in 2015:
+In 2015, total revenue decreased to $8,176, contributing 41.66% of the overall revenue. 
+This represents a 28.6% decline compared to the previous year (a drop of $3,276).
+
+3. Performance Shift Over Time:
+The shift from 2014 to 2015 suggests a downward trend in sales performance. This could be due to various factors such as market conditions, 
+changes in customer demand, pricing adjustments, competition, or internal changes in sales strategies.
+
+4. Need for Further Investigation:
+The year-over-year decline warrants a closer look into:
+
+Changes in sales strategy or personnel.
+Market or product availability shifts.
+External economic conditions.
+Customer behavior or satisfaction trends.
+
+5. Actionable Recommendation:
+Perform a comparative analysis of both years to identify specific drivers of success in 2014 and root causes for the decline in 2015. 
+This can inform future strategies to recover or boost sales.
+
+
+
+-----------------------------
+Revenue Distribution Insights:
+-----------------------------
+High Volume of Low Revenue Transactions:
+The majority of sales (24 out of 43) generated between $9 and $383 in revenue.
+This indicates that most sales are small transactions, possibly low-cost or low-quantity items.
+
+Few High Revenue Transactions:
+Only 2 transactions generated revenue above $1,505, showing that high-value sales are rare.
+These might be bulk purchases or high-cost items (e.g., desks or large binder orders).
+
+Skewed Distribution:
+The data is right-skewed, meaning there are many low-revenue transactions and very few high-revenue ones.
+This pattern is typical in sales data where everyday items (like pens or pencils) are sold more frequently than premium products.
+
+Mid-range Sales Are Limited:
+The middle ranges ($757–$1,505) have only 6 transactions combined.
+There might be fewer mid-volume purchases or this segment could be explored to improve sales.
+
+Potential for Upselling:
+Since most transactions are small, there's an opportunity to upsell—encourage customers to buy in bundles or suggest higher-value items.
+
+Why Unit Price for specific item is not constant:
+Different Vendors or Suppliers : Each sales representative might be selling for different vendors with varying prices.
+Promotions or Discounts :Some sales could have applied promotional pricing or discounts (e.g., Bill sold at ₹1.29, while Alex sold at ₹4.99).
+Bulk Order Pricing : Larger orders sometimes come with a reduced unit price or vice versa, depending on strategy.
+Regional Pricing Differences :Prices can vary by region (East, West, Central) due to shipping costs, taxes, or demand/supply factors.
+Time-Based Price Change : Over time, the same product might have changed in price (check the dates – early sales might be cheaper).
+
+
+
+
+in 2014 the total sales is 11452 and 2015 it is 8176.
+percentage change = ((old value - new value)/old value)*100
+percentage decrease = ((11452 - 8176)/11452)* 100 = 28% decrease.
+same formula applicable to increase.
+
+
+
